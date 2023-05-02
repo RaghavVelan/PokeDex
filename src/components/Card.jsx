@@ -3,7 +3,7 @@ import '../App.css';
 import pokeball from '../img/pokeball.png'
 
 
-export default function Card({pokemons, baseUrl, pokeSearch, infoPokemon, infoPokemonId}) {
+export default function Card({pokemons, baseUrl, pokeSearch, infoPokemon}) {
 
     
 

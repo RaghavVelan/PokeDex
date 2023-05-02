@@ -104,7 +104,7 @@ function App() {
       {prevPageUrl ? <button className='btn' onClick={HandleHome} >Home</button>: null}
       <br />
       <div className='cards'>
-      <Card pokemons={pokemons} baseUrl={baseUrl} pokeSearch={pokeSearch} infoPokemon={poke=>setPokeDex(poke)} infoPokemonId={poke=>setPokeDexId(poke)} />
+      <Card pokemons={pokemons} baseUrl={baseUrl} pokeSearch={pokeSearch} infoPokemon={poke=>setPokeDex(poke)} />
       </div>
       {
       pokeDex.length === 0 ? null
