@@ -1,9 +1,7 @@
 import React from 'react'
 import '../App.css';
-import pokeball from '../img/pokeball.png'
 import axios from 'axios';
 import { useEffect,useState } from 'react';
-import { json } from 'react-router-dom';
 
 export default function PokeModel({name,url,pokeDex}) {
 
@@ -18,7 +16,6 @@ export default function PokeModel({name,url,pokeDex}) {
 
   useEffect(() => {
     // setLoading(true)
-    let cancel
     axios.get(baseurl)
     .then((response) => {
       // setLoading(false)

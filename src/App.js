@@ -21,8 +21,8 @@ function App() {
   const [prevPageUrl, setPrevPageUrl] = useState([]);
   const [loading, setLoading] = useState(true)
   const [pokeDex,setPokeDex] = useState([])
-  const [pokeDexId,setPokeDexId] = useState()
-  const [modelName, setModelName] = useState(true)
+  // const [pokeDexId,setPokeDexId] = useState()
+  // const [modelName, setModelName] = useState(true)
 
   const arrpokesearch = [pokeSearch]
 
@@ -80,12 +80,12 @@ function App() {
     }
   }
 
-  function HandlePoke(){
-   if(pokeDex.name === ""){
-    setModelName(false)
-   }
-   else setModelName(true)
-  }
+  // function HandlePoke(){
+  //  if(pokeDex.name === ""){
+  //   setModelName(false)
+  //  }
+  //  else setModelName(true)
+  // }
 
   if(loading) return (
     <div className="loading">
