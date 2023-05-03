@@ -21,8 +21,6 @@ function App() {
   const [prevPageUrl, setPrevPageUrl] = useState([]);
   const [loading, setLoading] = useState(true)
   const [pokeDex,setPokeDex] = useState([])
-  // const [pokeDexId,setPokeDexId] = useState()
-  // const [modelName, setModelName] = useState(true)
 
   const arrpokesearch = [pokeSearch]
 
@@ -32,10 +30,6 @@ function App() {
       setAllPokemons(response.data.results);
     })
   }
-
-  // fetchAllPokemons()
-  // console.log(pokeDex)
-  // console.log(pokeDexId)
 
 
   useEffect(() => {
@@ -80,12 +74,6 @@ function App() {
     }
   }
 
-  // function HandlePoke(){
-  //  if(pokeDex.name === ""){
-  //   setModelName(false)
-  //  }
-  //  else setModelName(true)
-  // }
 
   if(loading) return (
     <div className="loading">

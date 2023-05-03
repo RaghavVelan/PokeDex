@@ -3,24 +3,11 @@ import '../App.css';
 import pokeball from '../img/pokeball.png'
 
 
-export default function Card({pokemons, baseUrl, pokeSearch, infoPokemon}) {
+export default function Card({pokemons, pokeSearch, infoPokemon}) {
 
     
 
-    const arrpokesearch = [pokeSearch]
-
-    // const fetchPokemon = async (pokeid) => {
-    //     const { data } = await axios.get(baseUrl + `pokemon/${pokeid}`)
-      
-    //     return {
-    //       sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`,
-    //       data: data
-    //     }
-
-    //   }
-
-   
-
+    const arrpokesearch = [pokeSearch] 
 
   return (
     <>

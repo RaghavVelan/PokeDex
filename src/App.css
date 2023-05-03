@@ -191,15 +191,16 @@ body{
   border-radius: .5rem;
   -webkit-filter: drop-shadow(12px 12px 7px rgba(224, 11, 11, 0.5));      
   filter: drop-shadow(12px 12px 7px rgba(221, 12, 12, 0.5));
-  position: absolute;
+  position: fixed;
   top: 1rem;
+  cursor: pointer;
 }
 .model>.close{
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-bottom: .5rem;
 }
-.model>.close>svg{
+.model>.close>img{
   width: 1.5rem;
 }
 
@@ -213,8 +214,83 @@ body{
   border: 2px #ccbebe ridge;
 }
 
+@media only screen and (min-width: 600px) {
+  .modelCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  
 .modelCard>h2{
+  grid-column: 1/span 2;
   font-size: 3rem;
+}
+
+.modelCard>img{
+  grid-column: 1;
+  justify-self: center;
+}
+
+.modelCard>.pokeWH{
+  grid-column: 2;
+  grid-row: 2;
+  margin-bottom: 4rem;
+}
+
+.modelCard>.type{
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 3rem;
+  margin-bottom: .5rem;
+}
+
+.modelCard>.type>h3,
+.modelCard>.type>span{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.ability{
+  color: #5a1717;
+  border: 2px white solid;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.ability span{
+  background:  rgba(89,163,14,1);
+  color: #ffffff;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  border: 1px rgb(165, 134, 134) ridge;
+  margin-bottom: .5rem;
+ }
+
+.stat{
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #411515;
+}
+
+.IndividualStat{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: 1rem;
+  border: 1px rgb(34, 31, 31) groove;
+}
+}
+
+.modelCard>h2{
   text-transform: uppercase;
   text-align: center;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -233,7 +309,8 @@ body{
 
 .modelCard>.pokeWH{
   display: flex;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2rem;
   font-size: 2rem;
   color: #f80b2a;
 }
