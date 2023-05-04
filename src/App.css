@@ -189,12 +189,24 @@ body{
   background-color: #e0ecec;
   padding:1rem 2rem 2rem;
   border-radius: .5rem;
-  -webkit-filter: drop-shadow(12px 12px 7px rgba(224, 11, 11, 0.5));      
-  filter: drop-shadow(12px 12px 7px rgba(221, 12, 12, 0.5));
   position: fixed;
-  top: 1rem;
+  /* top: 1rem; */
+  bottom: 0%;
+  width: 100%;
   cursor: pointer;
+  animation: cardModel 500ms ease-in-out;
 }
+
+@keyframes cardModel {
+  0%{
+    bottom: -100%;
+    opacity: 0;
+  }
+  100%{
+    bottom: 0%;
+  }
+}
+
 .model>.close{
   display: flex;
   justify-content: flex-start;
@@ -214,7 +226,14 @@ body{
   border: 2px #ccbebe ridge;
 }
 
-@media only screen and (min-width: 600px) {
+
+
+@media only screen and (min-width: 700px) {
+
+  .model{
+    width: max-content;
+  }
+
   .modelCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -286,7 +305,6 @@ body{
   justify-content: space-between;
   width: 100%;
   padding-inline: 1rem;
-  border: 1px rgb(34, 31, 31) groove;
 }
 }
 
@@ -363,9 +381,10 @@ body{
 
 .IndividualStat{
   display: flex;
-  align-items: center;
+  /* flex-direction: column; */
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding-inline: 1rem;
-  border: 1px rgb(34, 31, 31) groove;
+  /* border: 1px rgb(34, 31, 31) groove; */
 }

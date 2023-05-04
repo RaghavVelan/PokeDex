@@ -72,7 +72,7 @@ export default function PokeModel({name,url,pokeDex}) {
                     <span>
                     {stat.stat.name.toUpperCase()}  &nbsp;
                     </span>
-                    <span>
+                    <span className='progress'>
                       :&nbsp;{stat.base_stat} / 255
                     </span>
                     </div>
