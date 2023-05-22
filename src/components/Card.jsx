@@ -23,7 +23,7 @@ export default function Card({pokemons, pokeSearch, infoPokemon}) {
               {pokeid1 < 650 ? 
               <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid1}.svg`} className='pokemonImg' alt=""  /> : 
               <img src={pokeball} className='pokemonImg' alt="" />}
-                <h3 className='pokemonName'>{pokemon.name}</h3>
+                <h3 className='pokemonName'>{pokemon.name.replace( /-/g, ' ' )}</h3>
               </div>
             )
         })  :arrpokesearch.map((pokemon,pokeid) => {
