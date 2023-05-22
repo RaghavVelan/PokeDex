@@ -34,7 +34,7 @@ export default function PokeModel({name,url,pokeDex}) {
     <div className='model'>
       <span className='close'  ><img src={Back} alt="Back" onClick={()=>pokeDex([])} /></span>
         <div className="modelCard">
-          <h2>{name}</h2>
+          <h2>{nnonnnnon}</h2>
          <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeid1}.svg`} className='pokemonImg' alt={name}  />
          <div className="pokeWH">
          <span className='height'>HEIGHT: {height}</span>
