@@ -31,6 +31,10 @@ function App() {
     })
   }
 
+  useEffect(() => {
+    fetchAllPokemons()
+    return
+  }, [])
 
   useEffect(() => {
     setLoading(true)
@@ -38,7 +42,6 @@ function App() {
     axios.get(currentPageUrl, {cancelToken: new axios.CancelToken(c => cancel = c)})
     .then((response) => {
       setLoading(false)
-      fetchAllPokemons()
       setNextPageUrl(response.data.next)
       setPrevPageUrl(response.data.previous)
       setPokemons(response.data.results);
@@ -84,7 +87,7 @@ function App() {
 
   return (
     <div className="App" id='App'>
-      <Head SearchPokemon={SearchPokemon} allPokemons={allPokemons} />
+      <Head SearchPokemon={SearchPokemon} allPokemons={allPokemons} HandleBack={HandleBack} />
       {!arrpokesearch[0].name ? <Pagination
        gotoNextPage={nextPageUrl ? gotoNextPage : null}
        gotoPrevPage={prevPageUrl ? gotoPrevPage : null} 
@@ -94,6 +97,7 @@ function App() {
       <div className='cards'>
       <Card pokemons={pokemons} baseUrl={baseUrl} pokeSearch={pokeSearch} infoPokemon={poke=>setPokeDex(poke)} />
       </div>
+      <br />
       {
       pokeDex.length === 0 ? null
       : <PokeModel  name={pokeDex.name} url={pokeDex.url} pokeDex={setPokeDex}/> 

@@ -43,7 +43,7 @@ function handleKeyPress(event){
   return (
     <>
         <div className="head">
-            <img src={logo} alt="PokeDex" />
+            <img src={logo} alt="PokeDex" onClick={props.HandleBack} />
             <div className="search">
                 <input type="text" id='search-bar' placeholder='Search Pokemon' className='search-bar' value={name} onChange={e=>setName(e.target.value)} onKeyDown={handleKeyPress} />
                 <button type='submit' className='search-btn' onClick={()=>SearchItem(searchName)}>Search</button>

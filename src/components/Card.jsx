@@ -7,7 +7,7 @@ export default function Card({pokemons, pokeSearch, infoPokemon}) {
 
     
 
-    const arrpokesearch = [pokeSearch] 
+    const arrpokesearch = [pokeSearch]
 
   return (
     <>
